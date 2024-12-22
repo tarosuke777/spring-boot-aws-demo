@@ -16,3 +16,6 @@ phases:
   post_build:
     commands:
        - docker push public.ecr.aws/f9s4g9c5/tarosuke777/demo
+       - echo "[{\"name\":\"hms-container\",\"imageUri\":\"public.ecr.aws/f9s4g9c5/tarosuke777/demo:latest\"}]" > imagedefinitions.json
+artifacts:
+  files: imagedefinitions.json
